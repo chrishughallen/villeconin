@@ -9,9 +9,8 @@
 
 :root {
   --chateau-red: #5B110F;
+  --jalapeno-red: #b71540;
   --cursive-font: 'Ms Madi', cursive;
-  --cursive-light: 'Whisper', cursive;
-  --cursive-paris: 'Parisienne', cursive;
 }
 
 body {
@@ -20,6 +19,10 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body.fixed-body {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -37,7 +40,6 @@ header {
   display: flex;
   flex-direction: column;
   background: var(--chateau-red);
-  padding: 1rem 0 0 0;
 }
 
 /* BANNER COMPONENT */
@@ -48,17 +50,59 @@ header {
   align-items: center;
 }
 
-.banner > h1 {
+.banner > a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner > a > h1 {
   font-weight: 100;
+  padding-top: 1.5rem;
   color: white;
   font-family: var(--cursive-font);
   font-size: 3rem;
 }
 
-.banner > p {
+.banner > a > p {
   color: white;
   padding-bottom: 3rem;
-  font-size: 1.3rem;
+}
+
+.banner > svg {
+  display: none;
+}
+
+/* MOBILE BANNER STYLES */
+
+@media (max-width:500px) {
+  .banner {
+    height: 20vh;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1.5rem;
+    grid-template-areas:
+      'logo icon'
+      'tagline .';
+    box-shadow: 0 0 1px 0 white;
+  }
+
+  .banner > a > h1 {
+    grid-area: logo;
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+
+  .banner > a > p {
+    grid-area: tagline;
+    padding-bottom: 1.5rem;
+  }
+  
+  .banner > svg {
+    display: block;
+    grid-area: icon;
+    justify-self: flex-end;
+  }
 }
 
 /* NAVBAR COMPONENT */
@@ -83,7 +127,7 @@ nav > ul > li {
 nav > ul > li > a {
   color: white;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 nav > ul > li:last-child {
@@ -92,6 +136,31 @@ nav > ul > li:last-child {
 
 nav > ul > li > a.nav-link-active {
   font-weight: bold;
+}
+
+/* MOBILE NAV STYLES */
+
+@media (max-width: 500px) {
+  .nav {
+    display: none;
+  }
+
+  .nav.show-mobile-menu {
+    display: flex;
+    height: 100vh;
+    box-shadow: none;
+    padding-top: 25%;
+  }
+
+  .nav.show-mobile-menu > ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav.show-mobile-menu > ul > li {
+    padding: 1rem;
+  }
 }
 
 /* HERO COMPONENT */
@@ -111,13 +180,8 @@ nav > ul > li > a.nav-link-active {
 
 /* MAIN CONTENT STYLES */
 main {
-  /* margin-top: 5rem; */
-  font-size: 1.3rem;
   height: 100%;
   grid-column: 2;
-}
-
-main.main-top-spacing {
   margin-top: 5rem;
 }
 
@@ -138,21 +202,26 @@ main > section.col-even-2 {
   grid-gap: 3rem;
 }
 
+
 main > section.col-big-right-2 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: 3rem;
 }
 
+main > section.col-big-right-2 > article > p,
+main > section.col-big-right-2 > article > ul {
+  max-width: 55ch;
+}
+
 main > section > img {
   width: 100%;
-  border-radius: 10px;
   height: 100%;
   object-fit: cover;
 }
 
 main > section > article > h1 {
-  font-family: 'Ms Madi', cursive;
+  /* font-family: 'Ms Madi', cursive; */
   color: white;
   font-size: 3.5rem;
 }
@@ -160,9 +229,13 @@ main > section > article > h1 {
 main > section > article > p,
 main > section > article > ul {
   color: white;
-  max-width: 55ch;
   line-height: 1.75rem;
   margin-bottom: 2rem;
+}
+
+main > section > article > a,
+main > section > article > p > a  {
+  color: white;
 }
 
 main > section > article > ul {
@@ -175,13 +248,30 @@ a.mail-link {
   margin-bottom: 1rem;
 }
 
+
+/* MAIN MOBILE STYLES */
 @media (max-width: 500px) {
   .wrapper {
     grid-template-columns: 20px 1fr 20px;
   }
 
+  main {
+    margin-top: 2.5rem;
+  }
+
+  main > section {
+    margin-bottom: 2.5rem;
+  }
+
   main > section.col-even-2 {
     display: flex;
     flex-direction: column-reverse;
+    grid-gap: 1.25rem;
+  }
+
+  main > section.col-big-right-2 {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.25rem;
   }
 }
