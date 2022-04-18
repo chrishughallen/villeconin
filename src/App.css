@@ -281,13 +281,13 @@ a.mail-link {
     margin-bottom: 2.5rem;
   }
 
-  main > section.col-even-2 {
+  main > section.col-2 {
     display: flex;
     flex-direction: column-reverse;
     grid-gap: 1.25rem;
   }
 
-  main > section.col-big-right-2 {
+  main > section.col-2 {
     display: flex;
     flex-direction: column;
     grid-gap: 1.25rem;
