@@ -1,0 +1,65 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.banner > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.banner > a > h1 {
+  font-weight: 100;
+  padding-top: 1.5rem;
+  /* color: white; */
+  font-family: var(--cursive-font);
+  font-size: 3rem;
+}
+
+.banner > a > p {
+  padding-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.banner > svg {
+  display: none;
+}
+
+@media (max-width:500px) {
+  .banner {
+    height: 20vh;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1.5rem;
+    grid-template-areas:
+      'banner icon';
+    box-shadow: 0 0 1px 0 white;
+    text-align: initial;
+  }
+
+  .banner > a {
+    grid-area: banner;
+  }
+
+  .banner > a > h1 {
+    grid-area: logo;
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+
+  .banner > a > p {
+    grid-area: tagline;
+    padding-bottom: 0;
+  }
+  
+  .banner > svg {
+    grid-area: icon;
+    display: block;
+    grid-area: icon;
+    justify-self: flex-end;
+  }
+}

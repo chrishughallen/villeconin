@@ -1,7 +1,8 @@
 import Hero from '../Components/Hero.js';
 import chateau from '../chateau.jpg';
-import chateau_2 from '../chateau-2.jpg';
+import chateau_2 from '../chateau_2.jpg';
 import chateau_3 from '../chateau_3.jpg';
+import chateau_lawn from '../chateau_lawn.jpg';
 
 export default function Home() {
   return(
@@ -53,7 +54,7 @@ export default function Home() {
               Les guides, membres de la famille, vous plongeront dans l'Histoire de France et les anecdotes familiales.
             </p>
           </article>
-          <img src={chateau_3} alt="" />
+          <img src={chateau_lawn} alt="" />
         </section>
       </main>
     </>

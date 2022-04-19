@@ -1,0 +1,11 @@
+.hero {
+  grid-column: 1 / 4;
+  height: 100%;
+}
+
+.hero > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import '../Navbar.css';
 
 const closeMenu = () => {
   document.querySelector('.nav').classList.remove('show-mobile-menu')
