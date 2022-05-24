@@ -63,7 +63,15 @@ main > section.col-2 {
 }
 
 main > section.col-2 > article > h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+main > section.col-2 > article > p {
+  padding: 0.5rem 0;
+}
+
+main > section.col-2 > article > p:first-child {
+  padding-top: 0;
 }
 
 main > section.col-big-right-2 {

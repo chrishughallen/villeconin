@@ -1,6 +1,10 @@
+import chateau_fleurs from '../chateau_fleurs.jpg';
+import Hero from '../Components/Hero.js';
+
 export default function Contact() {
   return(
     <main className="contact">
+      {/* <Hero image={chateau_fleurs}/> */}
       <section className="center-column">
         <article>
           <h1>Contact</h1>
