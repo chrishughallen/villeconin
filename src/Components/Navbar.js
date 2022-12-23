@@ -17,18 +17,40 @@ export default function Navbar() {
             to="/"
             className={({isActive}) => (isActive ? "nav-link nav-link-active" : "nav-link")}
           >
-          Home
+          Accueil
           </NavLink>
         </li>
+
         <li>
           <NavLink
             onClick={closeMenu}
             to="/about"
             className={({isActive}) => (isActive ? "nav-link nav-link-active" : "nav-link")}
           >
-          About
+          Informations pratiques
           </NavLink>
         </li>
+
+        <li>
+          <NavLink
+            onClick={closeMenu}
+            to="/about"
+            className={({isActive}) => (isActive ? "nav-link nav-link-active" : "nav-link")}
+          >
+          Tournage / Shooting
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            onClick={closeMenu}
+            to="/about"
+            className={({isActive}) => (isActive ? "nav-link nav-link-active" : "nav-link")}
+          >
+          Actualités
+          </NavLink>
+        </li>
+
         <li>
           <NavLink
             onClick={closeMenu}
