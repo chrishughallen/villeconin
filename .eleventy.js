@@ -1,4 +1,9 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("assets/stylesheets");
-  eleventyConfig.addPassthroughCopy("assets/images");
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("assets");
+
+  return {
+    dir: {
+      input: "views", // or whatever your input directory is
+    }
+  };
 };
