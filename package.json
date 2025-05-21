@@ -1,0 +1,15 @@
+{
+  "name": "villeconin",
+  "version": "1.0.0",
+  "description": "Site for the historic chateau de villeconin",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "author": "Chris Allen",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0"
+  }
+}

@@ -1,0 +1,17 @@
+body {
+  background-image: url('/assets/images/chateau.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: roboto;
+
+  .overlay {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.2);
+    color: white;
+
+    h1 {
+      font-family: "Pinyon Script", cursive;
+    }
+  }
+}
