@@ -1,17 +1,55 @@
+.navbar-brand {
+  font-family: "Pinyon Script", cursive;
+}
+
 body {
-  background-image: url('/assets/images/chateau.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: roboto;
+  background-attachment: fixed;
+  background-position-x: center;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
 
-  .overlay {
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0,0,0,0.2);
-    color: white;
+  &.home {
+    background-image: url('/assets/images/chateau.jpg');
+  }
 
-    h1 {
-      font-family: "Pinyon Script", cursive;
+  &.access {
+    background-image: url('/assets/images/moat.jpg');
+  }
+
+  &.history {
+    background-image: url('/assets/images/statue.jpg');
+
+    &::before {
+      background: rgba(0, 0, 0, 0.6);
     }
   }
+
+  &.contact {
+    background-image: url('/assets/images/park.jpg');
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 0;
+}
+
+h1 {
+  font-family: "Pinyon Script", cursive;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
