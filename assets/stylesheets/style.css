@@ -2,6 +2,10 @@
   font-family: "Pinyon Script", cursive;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 body {
   background-size: cover;
   background-repeat: no-repeat;
