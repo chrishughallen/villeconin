@@ -16,7 +16,7 @@ body {
     background-position-x: center;
     position: relative;
     min-height: 100vh;
-    background-image: url('/assets/images/chateau.jpg');
+    background-image: url('/assets/images/new_castle.jpeg');
     color: white;
 
     &::before {
